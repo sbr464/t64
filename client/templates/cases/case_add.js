@@ -5,6 +5,7 @@ Template.addNewCase.events({
     var caseItem = {
       company: $(e.target).find('[name=company]').val(),
       subject: $(e.target).find('[name=subject]').val(),
+      description: $(e.target).find('[name=description]').val(),
       priority: $(e.target).find('[name=priority]').val()
     };
 
