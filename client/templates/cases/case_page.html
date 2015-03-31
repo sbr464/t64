@@ -1,0 +1,50 @@
+<template name="casePage">
+  <div class="case-page page">
+    {{> caseItem}}
+  </div>
+</template>
+
+
+
+<template name="caseItem">
+<h4>Case Details</h4>
+  <div>
+   <p>
+     <b>{{company}}</b>
+     <br>{{subject}}
+     <br>{{priority}}
+     <!-- <span class="hidden" id="caseID" data-CaseID="{{_id}}"></span> -->
+   </p>
+   <hr>
+
+   <a id="addcomment" href="javascript:void(0)" class="btn btn-default btn-sm btn-raised">New Comment<div class="ripple-wrapper"></div></a>
+   <form id="add-comment-form" class="hidden main form page">
+     <!-- <div class="form-group">
+       <label class="control-label" for="subject">Subject</label>
+       <div class="controls">
+           <input name="subject" id="subject" type="text" value="" placeholder="Subject" class="form-control"/>
+       </div> -->
+     <!-- </div> -->
+     <div class="form-group">
+       <label class="control-label" for="body">Body</label>
+       <div class="controls">
+           <input name="body" id="body" type="text" value="" placeholder="Body" class="form-control"/>
+       </div>
+     </div>
+     <div class="hidden form-group">
+       <label class="control-label" for="caseID">CaseID</label>
+       <div class="controls">
+           <input name="caseID" data-CaseID="{{_id}}" type="text" value="{{_id}}" placeholder="CaseID" class="form-control"/>
+       </div>
+     </div>
+     <input type="submit" value="Submit" class="btn btn-primary"/>
+   </form>
+   <hr>
+   <h4>Comments</h4>
+   <ul class="comments">
+      {{#each comments}}
+        {{> commentBlock}}
+      {{/each}}
+    </ul>
+  </div>
+</template>

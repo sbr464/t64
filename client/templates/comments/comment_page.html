@@ -1,0 +1,36 @@
+<template name="commentPage">
+  <div class="comment-page page">
+    {{> commentItem}}
+  </div>
+</template>
+
+
+
+<template name="commentItem">
+  <div>
+   <p>
+     <b>{{caseID}}</b>
+     <br>{{subject}}
+     <br>{{body}}
+     <br>ID: _{{_id}}
+   </p>
+  </div>
+</template>
+
+<template name="commentBlock">
+  <li>
+    <p><strong>
+          <a href="{{pathFor 'commentPage'}}">
+      <span class="subject">{{subject}}</span></a>
+    </strong></p>
+    <p>{{body}}</p>
+    <p>{{dateMoment}}</p>
+  </li>
+
+<!--   <li>
+     <b>{{caseID}}</b>
+     <br>{{subject}}
+     <br>{{body}}
+     <br>ID: _{{_id}}
+  </li> -->
+</template>

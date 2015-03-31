@@ -1,0 +1,22 @@
+<!-- loops through clients and lists on client page -->
+
+<template name="commentslist">
+<h3>Comments</h3>
+  {{#each comments}}
+    {{> comment}}
+  {{/each}}
+</template>
+
+<!-- lists each client item on the client page -->
+
+<template name="comment">
+  <p>
+    <a href="{{pathFor 'commentPage'}}">
+      <b>{{caseID}}</b>
+    </a>
+    <br>{{date}}
+    <br>{{body}}
+    <br>ID: _{{_id}}
+  </p>
+  <p><hr></p>
+</template>

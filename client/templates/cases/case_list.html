@@ -1,0 +1,22 @@
+<!-- loops through clients and lists on client page -->
+
+<template name="caselist">
+<h3>Cases</h3>
+  {{#each cases}}
+    {{> case}}
+  {{/each}}
+</template>
+
+<!-- lists each client item on the client page -->
+
+<template name="case">
+  <p>
+    <a href="{{pathFor 'casePage'}}">
+      <b>{{company}}</b>
+    </a>
+    <br>{{subject}}
+    <br>{{priority}}
+    <br>ID: _{{_id}}
+  </p>
+  <p><hr></p>
+</template>

@@ -1,0 +1,34 @@
+<template name="addNewCase">
+  <form class="main form page">
+    <div class="form-group">
+      <label class="control-label" for="company">Company</label>
+      <div class="controls">
+          <select name="company" class="form-control" id="select">
+            <option disabled="disabled">Select Company</option>
+            {{#each clients}}
+             <option>{{company}}</option>
+            {{/each}}
+          </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="url">Subject</label>
+      <div class="controls">
+          <input name="subject" id="subject" type="text" value="" placeholder="Subject" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="priority">Priority</label>
+      <div class="controls">
+          <select name="priority" class="form-control" id="select">
+            <option>Normal</option>
+            <option>Low</option>
+            <option>High</option>
+            <option>Urgent</option>
+          </select>
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary"/>
+  </form>
+</template>
+

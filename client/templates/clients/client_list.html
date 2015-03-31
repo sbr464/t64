@@ -1,0 +1,22 @@
+<!-- loops through clients and lists on client page -->
+
+<template name="clientlist">
+<h3>Clients</h3>
+  {{#each clients}}
+    {{> client}}
+  {{/each}}
+</template>
+
+<!-- lists each client item on the client page -->
+
+<template name="client">
+  <p>
+    <a href="{{pathFor 'clientPage'}}">
+      <b>{{company}}</b>
+    </a>
+    <br>{{url}}
+    <br>{{phone}}
+    <br>ID: _{{_id}}
+  </p>
+  <p><hr></p>
+</template>

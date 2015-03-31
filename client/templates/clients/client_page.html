@@ -1,0 +1,25 @@
+<template name="clientPage">
+  <div class="client-page page">
+    {{> clientItem}}
+  </div>
+  <div>
+  <hr>
+  <h3>Cases</h3>
+  {{#each cases}}
+    {{> case}}
+  {{/each}}
+  </div>
+</template>
+
+
+
+<template name="clientItem">
+  <div>
+   <p>
+     <b>{{company}}</b>
+     <br>{{url}}
+     <br>{{phone}}
+     <br>ID: _{{_id}}
+   </p>
+  </div>
+</template>
